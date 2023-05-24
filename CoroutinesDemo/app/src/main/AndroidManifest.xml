@@ -10,13 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CoroutinesDemo">
         <activity
-            android:name=".ClassCodeActivity1"
-            android:exported="true">
+            android:name=".Practice1Activity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".Lectures1Activity"
+            android:exported="true">
         </activity>
     </application>
 
