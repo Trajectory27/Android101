@@ -11,6 +11,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.hjq.permissions.OnPermissionCallback
 import com.hjq.permissions.XXPermissions
+import com.hjq.toast.Toaster
 import com.trajectory27.runtimepermissiondemo.databinding.ActivityMainBinding
 import java.lang.Exception
 
@@ -101,10 +102,10 @@ class MainActivity : AppCompatActivity() {
                     override fun onGranted(permissions: MutableList<String>, allGranted: Boolean) {
                         if (!allGranted) {
                             // 有且仅有部分权限授予成功
-                            Toast.makeText(this@MainActivity, "部分权限授予成功", Toast.LENGTH_SHORT).show()
+                            Toaster.show("仅部分权限授予成功")
                         } else {
                             // 全部权限授予成功
-                            Toast.makeText(this@MainActivity, "全部权限授予成功", Toast.LENGTH_SHORT).show()
+                            Toaster.showShort("全部权限授予成功")
                         }
 
                     }
@@ -116,11 +117,11 @@ class MainActivity : AppCompatActivity() {
                         super.onDenied(permissions, doNotAskAgain)
                         if (doNotAskAgain) {
                             // 永久拒绝任意一个权限
-                            Toast.makeText(this@MainActivity, "永久拒绝权限，需要手动开启", Toast.LENGTH_SHORT).show()
+                            Toaster.show("永久拒绝权限，需要手动开启")
                             XXPermissions.startPermissionActivity(this@MainActivity, permissions)
                         } else {
                             // 有权限获取失败，但是所有权限都可以再次直接请求
-                            Toast.makeText(this@MainActivity, "获取权限失败", Toast.LENGTH_SHORT).show()
+                            Toaster.show("获取权限失败")
                         }
 
                     }
