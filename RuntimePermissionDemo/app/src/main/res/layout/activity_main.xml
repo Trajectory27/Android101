@@ -17,4 +17,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btnRequestMultiPer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="request a lot"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMakeCall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnUseXX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XXPermission"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnMakeCall" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
