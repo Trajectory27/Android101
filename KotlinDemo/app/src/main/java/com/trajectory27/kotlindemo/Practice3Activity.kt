@@ -1,9 +1,7 @@
 package com.trajectory27.kotlindemo
 
-import android.app.Person
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import java.sql.Time
+import androidx.appcompat.app.AppCompatActivity
 /**
  * @Author Trajectory27
  * @Description 【码上开学】Kotlin 里那些「更方便的」 作业
@@ -17,6 +15,12 @@ class Practice3Activity : AppCompatActivity() {
 
         val student = Student("Tim", 20)
         student.show()
+
+        // 用第一个副构造函数
+        val student1 = Student("Jack")
+
+        // 用第二个副构造函数
+        val student2 = Student(20)
 
         val list = listOf(21, 40, 11, 33, 78)
         val resultList = mutableListOf<Int>()
@@ -32,8 +36,8 @@ class Practice3Activity : AppCompatActivity() {
 
 class Student (private val name: String, private val id: Int) {
 
-    constructor(Person: Person) : this("rengwuxian", 10)
-    constructor(Time: Time) : this("Trajectory27", 20)
+    constructor(name: String) : this(name,  10)
+    constructor(id: Int) : this("Trajectory27", id)
 
     fun show() {
         println("KotlinDemo $name $id")
